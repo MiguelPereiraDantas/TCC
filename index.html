@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculdade CESMAC - Informações para Alunos</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/assets/256x256bb.jpg" alt="CESMAC Logo">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#">Menu</a></li>
+                    <li class="nav-link services">
+                        <a href="#">Portal do Cesmac
+                            <span class="material-icons dropdown-icon">
+                                arrow_drop_down
+                            </span>
+                        </a>
+                        <ul class="drop-down">
+                            <li>ACESSE O PORTAL DO ALUNO</li>
+                            <li>ACESSE O CESMAC ONLINE</li>
+                            <li>ACESSE O PORTAL DO PROFESSOR</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contraste</a></li>
+                    <div class="container">
+                        <div class="searchbox">
+                            <input type="text" class="searchbox__input" placeholder="Search..." />
+                            <svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
+                            </svg>
+                        </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="banner">
+            <img src="/assets/cesmac.jpg" alt="CESMAC Banner" style="max-width: 100%;">
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                   
+                    <h3>JÁ SOU
+                        ALUNO</h3>
+                    <p>Instituições:</p>
+                        <ul>
+                            <li><a href="https://www.cesmac.edu.br/inicio">Maceió</a></li>
+                            <li><a href="https://agreste.cesmac.edu.br/">Arapiraca</a></li>
+                            <li><a href="https://sertao.cesmac.edu.br/">Palmeira dos Índios</a></li>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    
+                    <h3>QUERO SER ALUNO DE
+                        PÓS-GRADUAÇÃO</h3>
+                        <p>Instituições:</p>
+                        <ul>
+                            <li><a href="https://acesso.cesmac.edu.br/maceio/pos-graduacao">Maceió</a></li>
+                            <li><a href="https://acesso.cesmac.edu.br/agreste/pos-graduacao">Arapiraca</a></li>
+                            <li><a href="https://acesso.cesmac.edu.br/sertao/pos-graduacao">Palmeira dos Índios</a></li>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    
+                    <h3>QUERO SER ALUNO DE
+                        GRADUAÇÃO</h3>
+                    <p>Instituições:
+                        <ul>
+                            <li><a href="https://acesso.cesmac.edu.br/maceio/graduacao">Maceió</a></li>
+                            <li><a href="https://acesso.cesmac.edu.br/agreste/graduacao">Arapiraca</a></li>
+                            <li><a href="https://acesso.cesmac.edu.br/sertao/graduacao">Palmeira dos Índios</a></li>
+                            <li><a href="https://ead.cesmac.edu.br/">EAD</a></li>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    
+                    <h3>QUERO ME INFORMAR
+                        SOBRE A DISTRIBUIÇÃO 
+                        DE SALAS / ANDARES
+                    </h3>
+                    <p>Clique aqui para saber mais informações de qual sala e qual andar você irá ficar</p>
+                    <a href="#">Mais Informações</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy;Copyright  2022. Todos os direitos reservados. Todo conteúdo deste site é de uso exclusivo do Cesmac.</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+</html>

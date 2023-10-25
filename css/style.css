@@ -1,0 +1,287 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+.container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex; /* Adiciona display flex para alinhar os cards lado a lado */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha abaixo se o espaço não for suficiente */
+}
+.container .searchbox {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 53px;
+    transition: 0.4s linear;
+    overflow: hidden;
+  }
+  .container .searchbox .searchbox__input {
+    display: block;
+    appearance: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: rgb(25, 71, 221);
+    padding: 15px;
+    color: rgb(25, 71, 221);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s linear;
+  }
+  .container .searchbox .searchbox__input::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  .container .searchbox .searchbox__icon {
+    position: absolute;
+    right: calc(53px / 2);
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+  .container .searchbox .searchbox__icon path {
+    fill: #dcf400;
+    transition: 0.4s linear;
+  }
+  .container .searchbox:focus-within {
+    max-width: 300px;
+  }
+  .container .searchbox:focus-within .searchbox__input {
+    background-color: #FFF;
+    padding-right: 50px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.4);
+  }
+  .container .searchbox:focus-within .searchbox__icon path {
+    fill: rgb(25, 71, 221);
+  }
+.container .card{
+    position: relative;
+    width: 280px;
+    flex: 0 0 calc(33.33% - 60px); /* Ajusta a largura dos cards para ocupar cerca de um terço da largura total com um espaçamento de 60px entre eles */
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgb(25, 71, 221);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255, 0.5);
+    border-left: 1px solid rgba(255,255,255, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform:  translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.container .card .content h3{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.container .card .content p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.container .card .content ul li a {
+    background-color: rgb(255, 255, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: black;
+}
+header {
+    background-color: rgb(25, 71, 221);
+    color: #ffffff;
+    padding-inline: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link, .drop-down li {
+  list-style: none;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.drop-down {
+  position: absolute;
+  padding: 0.5rem 0;
+  margin: 0.5rem -0.5rem;
+  background: rgb(0, 58, 248);
+  color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-size: 12px;
+  display: none;
+}
+
+.nav-link:hover {
+  background-color: black;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.services:hover .drop-down {
+  display: block;
+}
+
+.services a {
+  display: flex;
+  align-items: center;
+}
+
+.services .dropdown-icon {
+  font-size: 18px;
+  position: relative;
+  right: -5px;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out all;
+}
+
+.services:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.drop-down li:hover {
+  background: black;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+  .nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    align-items: center; /* Align items vertically in the center */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+  }
+  
+  .nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding-block: 16px;
+  }
+.logo {
+    text-align: center;
+    flex: 1;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Adiciona esta propriedade para centralizar */
+    padding: 0;
+}
+nav li {
+    margin: 0 10px; /* Adiciona margens horizontais para separar os itens */
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav a:hover {
+    color: #cccccc;
+}
+.banner {
+    width: 100%;
+    text-align: center;
+}
+section, aside {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #35424a;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
